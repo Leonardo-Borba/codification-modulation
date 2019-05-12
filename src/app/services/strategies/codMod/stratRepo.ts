@@ -5,13 +5,14 @@ import { NonReturnToZeroInverted } from './impl/NonReturnToZeroInverted';
 import { AlternateMarkInversion } from './impl/AlternateMarkInversion';
 import { ManchesterBipolar } from 'src/app/services/strategies/codMod/impl/ManchesterBipolar';
 import { DiferentialManchester } from 'src/app/services/strategies/codMod/impl/DiferentialManchester';
+import { Pseudoternary } from './impl/Pseudoternary';
 
 export let stratList: {[key: string]: CodModStrategy } = {
     'NRZ': new NonReturnToZero(),
     'NRZ-L':new NonReturnToZeroLevelBipolar(),
     'NRZI':new NonReturnToZeroInverted(),
     'AMI': new AlternateMarkInversion(),
-    'Pseudoternary':null,
+    'Pseudoternary':new Pseudoternary(),
     'ManchesterBipolar':new ManchesterBipolar(),
     'diferentialManchesterBipolar': new DiferentialManchester(),
     'ASK': null,
