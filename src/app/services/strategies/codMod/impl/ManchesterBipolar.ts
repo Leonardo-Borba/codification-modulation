@@ -9,7 +9,7 @@ export class ManchesterBipolar extends CodModStrategy{
     public generateGraph(): { x: number; y: number; }[] {
         let final : { x: number; y: number; }[] = [];
 
-         for(let index = 0;index < this.inputString.length;index++){
+         for(let index = 0;index <= this.inputString.length;index++){
              let item: string = this.inputString.charAt(index);
              if(item == '0'){
                 final.push({x:index, y:5})

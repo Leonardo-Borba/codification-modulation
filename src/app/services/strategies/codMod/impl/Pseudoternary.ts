@@ -10,7 +10,7 @@ export class Pseudoternary extends CodModStrategy {
     public generateGraph(): { x: number; y: number; }[] {
         let final: { x: number; y: number; }[] = [];
         let lastZero = -5;
-        for (let index = 0; index < this.inputString.length; index++) {
+        for (let index = 0; index <= this.inputString.length; index++) {
             let thisItem = this.inputString.charAt(index);
             if (thisItem === '1') {
                 final.push(

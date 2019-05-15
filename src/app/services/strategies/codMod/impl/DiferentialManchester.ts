@@ -9,14 +9,14 @@ export class DiferentialManchester extends CodModStrategy{
     public generateGraph(): { x: number; y: number; }[] {
         let final : { x: number; y: number; }[] = [];
         let startAt = 5;
-        for(let index =0; index < this.inputString.length;index++){
+        for(let index = 0; index <= this.inputString.length;index++){
             let item: string = this.inputString.charAt(index);
             if(item === '0'){
-                final.push({x:index, y:startAt*-1})
-                final.push({x:index+0.5, y:startAt})
-            }else{
-                final.push({x:index, y:startAt})
+                final.push({x:index, y:startAt*1})
                 final.push({x:index+0.5, y:startAt*-1})
+            }else{
+                final.push({x:index, y:startAt*-1})
+                final.push({x:index+0.5, y:startAt*1})
                 startAt*=-1
             }
         }

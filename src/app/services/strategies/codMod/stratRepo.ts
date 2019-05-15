@@ -10,11 +10,11 @@ import { Pseudoternary } from './impl/Pseudoternary';
 export let stratList: {[key: string]: CodModStrategy } = {
     'NRZ': new NonReturnToZero(),
     'NRZ-L':new NonReturnToZeroLevelBipolar(),
-    'NRZI':new NonReturnToZeroInverted(),
+    'NRZ-I':new NonReturnToZeroInverted(),
     'AMI': new AlternateMarkInversion(),
     'Pseudoternary':new Pseudoternary(),
-    'ManchesterBipolar':new ManchesterBipolar(),
-    'diferentialManchesterBipolar': new DiferentialManchester(),
+    'Manchester Bipolar':new ManchesterBipolar(),
+    'Diferential Manchester Bipolar': new DiferentialManchester(),
     'ASK': null,
     'FSK': null,
     'PSK': null

@@ -14,7 +14,7 @@ export class NonReturnToZeroInverted extends CodModStrategy{
             x: 0 , y: lastEntry
         });
         console.log(final)
-        for (let index = 1; index < this.inputString.length; index++) {
+        for (let index = 1; index <= this.inputString.length; index++) {
             let thisEntry = this.inputString.charAt(index) === '1' ? lastEntry * -1 : lastEntry
             final.push(
                 {
