@@ -8,6 +8,7 @@ import { DiferentialManchester } from 'src/app/services/strategies/codMod/impl/D
 import { Pseudoternary } from './impl/Pseudoternary';
 import { AmplitudeShiftKeying } from './impl/AmplitudeShiftKeying';
 import { FrequencyShiftKeying } from './impl/FrequencyShiftKeying';
+import { PhaseShiftKeying } from './impl/PhaseShiftKeying';
 
 export let stratList: {[key: string]: CodModStrategy } = {
     'NRZ': new NonReturnToZero(),
@@ -19,5 +20,5 @@ export let stratList: {[key: string]: CodModStrategy } = {
     'Diferential Manchester Bipolar': new DiferentialManchester(),
     'ASK': new AmplitudeShiftKeying(),
     'FSK': new FrequencyShiftKeying(),
-    'PSK': null
+    'PSK': new PhaseShiftKeying()
 }
