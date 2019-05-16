@@ -6,6 +6,7 @@ import { AlternateMarkInversion } from './impl/AlternateMarkInversion';
 import { ManchesterBipolar } from 'src/app/services/strategies/codMod/impl/ManchesterBipolar';
 import { DiferentialManchester } from 'src/app/services/strategies/codMod/impl/DiferentialManchester';
 import { Pseudoternary } from './impl/Pseudoternary';
+import { AmplitudeShiftKeying } from './impl/AmplitudeShiftKeying';
 
 export let stratList: {[key: string]: CodModStrategy } = {
     'NRZ': new NonReturnToZero(),
@@ -15,7 +16,7 @@ export let stratList: {[key: string]: CodModStrategy } = {
     'Pseudoternary':new Pseudoternary(),
     'Manchester Bipolar':new ManchesterBipolar(),
     'Diferential Manchester Bipolar': new DiferentialManchester(),
-    'ASK': null,
+    'ASK': new AmplitudeShiftKeying(),
     'FSK': null,
     'PSK': null
 }
